@@ -1,109 +1,122 @@
-## 🧠 WEEK 1 — DAY 3: Accessibility from the Start
+# 🎯 Day 5: Pixel-Perfect Clone Build
 
-### 🎯 Objectives:
+## ✅ Goals
 
-By the end of today, you will:
+- Recreate part of a high-quality site (**Obys Typography Principles**, in your case)
+- Focus on **structure**, **spacing**, and **typography**
+- Style your layout to match the real site — **visually and rhythmically**
+- Maintain accessibility and clean HTML
+- Track changes in Git/GitHub
 
-- Understand **core accessibility (a11y) principles**
-- Use semantic **HTML and ARIA roles** correctly
-- Make your HTML **navigable by screen readers & keyboard**
-- Audit your current project for accessibility
+---
 
-### 👀 Why This Matters
+## 🧱 What You’re Building
 
-Awwwards-level work isn’t just beautiful — it’s **usable by everyone**. Accessibility is a **non-negotiable skill** in modern web dev, and integrating it from Day 1 makes everything better:
+You already have:
 
-- Better UX for _everyone_
-- Cleaner, more semantic code
-- You stand out in job interviews
+- Semantic HTML ✅
+- Atomic comments ✅
+- Accessibility ✅
 
-### 🔍 Topics to Focus On
+Now you’ll **style the layout** using CSS to closely match a section of the Obys site:
 
-#### ✅ 1. Landmark Roles
+- Navigation bar
+- Hero block (image, headline, pricing, meta, video teaser)
 
-These help screen readers understand layout.
+---
 
-Add `role` attributes or HTML5 semantic tags (many roles are implicit):
+## 🛠️ Tasks
 
-| Section        | Tag         | Role                         |
-| -------------- | ----------- | ---------------------------- |
-| Main nav       | `<nav>`     | role="navigation" (optional) |
-| Hero / content | `<section>` | role="region"                |
-| Footer         | `<footer>`  | role="contentinfo"           |
+### 🔹 1. Set Up CSS Baseline
 
-> **Your task:** Add appropriate roles and `aria-labels` to your nav, hero, etc.
+In `style.css`:
 
-#### ✅ 2. ALT Text for Images
+- Add a **CSS reset** (e.g. `* { margin: 0; padding: 0; box-sizing: border-box; }`)
+- Set base fonts and colors
+- Define spacing variables if you want (custom properties)
 
-- Make `alt=""` for decorative images
-- Be descriptive for meaningful images
-- Avoid “image of” or “photo of”
+---
 
-> Your task:
-> Update this:
+### 🔹 2. Style Your Layout
 
+Use **Flexbox** or **Grid** to lay out the hero section:
+
+- Align left/right columns
+- Make spacing match the reference site
+- Use `clamp()` or media queries for responsive behavior
+
+---
+
+### 🔹 3. Style Typography
+
+- Use correct font sizes, weights, and spacing
+- Apply consistent hierarchy:
+  - `<h1>`: clamp-based
+  - `<p>`: readable, good line-height
+- Consider using Google Fonts if needed
+
+---
+
+### 🔹 4. Make It Accessible
+
+- Maintain your existing `aria-label`s, alt text, etc.
+- Ensure text contrast is good
+- Make sure buttons and links are keyboard accessible
+
+---
+
+### 🔹 5. Commit Your Progress
+
+Use clear messages like:
+
+```bash
+git add .
+git commit -m "style: layout nav and hero section"
+git push
 ```
-<img src="#" alt="abstract 3d image" />
-```
 
-To something like:
+---
 
-```
-<img src="#" alt="Colorful 3D artwork representing typography concepts" />
-```
+## 🧠 Bonus Challenges (if time allows)
 
-#### ✅ 3. ARIA Attributes (Use Sparingly!)
+- Add `hover` styles to buttons/links
+- Add a custom cursor or motion-ready class (to prepare for Week 2)
+- Use `:focus-visible` for keyboard users
 
-Only use ARIA when native elements don’t do the job.
+---
 
-For example:
+## 📌 Your Deliverables
 
-```
-<button aria-label="Toggle grid overlay">[Grid]</button>
-```
+By the end of Day 5:
 
-> Your task:
-> Update ambiguous buttons (e.g., grid toggle) with `aria-label` so they make sense out of context.
+- A styled `index.html` and `style.css` matching your chosen section of Obys site
+- A committed + pushed GitHub repo with all changes
+- Pixel-perfect or close visual alignment
+- Accessibility still intact
 
-#### ✅ 4. Keyboard Navigation
+---
 
-Ensure all interactive elements:
+## 📚 Resources
 
-- Can be **tabbed through**
-- Don’t require a mouse
-- Use native elements like `<button>`, `<a>`, `<input>` (avoid `<div role="button">`)
+- [clamp() visual playground](https://clamp.font-size.app/)
+- [CSS Grid Cheat Sheet](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Typography in UI](https://uxdesign.cc/typography-in-user-interface-design-a-beginners-guide-205f0a4c5b9b)
+- [Google Fonts](https://fonts.google.com/)
 
-#### ✅ 5. Run an Accessibility Audit
+---
 
-Install the **axe DevTools Chrome extension** or use the built-in **Lighthouse audit** in Chrome DevTools.
+## ✅ Next Step
 
-> Your task:
+Start styling your layout and push changes as you go. When you're ready, say **“Day 5 complete”**, and I’ll:
 
-- Run an a11y audit on your page
-- Fix any basic issues it surfaces (missing labels, contrast, etc.)
+- Review your repo and CSS
+- Close out Week 1
+- Set you up for **Week 2: Responsive CSS + Editorial Grid Layouts**
 
-### 🛠️ Tasks for Day 3
+Let me know if you want:
 
-#### ✏️ In Code:
+- Help scaffolding your CSS
+- Font or spacing advice based on Obys
+- Debugging help as you build
 
-- [ ] Add proper `role` attributes or confirm semantic tags are enough
-- [ ] Improve all `alt` text
-- [ ] Add `aria-labels` to non-obvious buttons
-- [ ] Confirm all links/buttons are keyboard accessible
-
-#### 🔍 Audit:
-
-- [ ] Run axe or Lighthouse audit
-      Note any warnings/errors and fix at least 2
-
-#### 🗒️ Journal Prompt:
-
-> “What surprised you about accessibility? What’s one thing you’ll do differently in future projects because of this?”
-
-#### 📚 Resources:
-
-- WebAIM: Alt Text Decision Tree
-- MDN: ARIA Roles
-- Deque’s axe DevTools
-
-Once you've completed these tasks and the journal, say **“Day 3 complete”** and we’ll move on to **Day 4: Git + GitHub Mastery.**
+You're ready — let's go build something beautiful.

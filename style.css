@@ -1,1 +1,180 @@
-/* This is just to test a git branch */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./fonts/Neue\ montreal\ font.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --black: #222;
+  --white: #f2f2f2;
+  --dark-grey: #333333;
+  --yellow: #f1d539;
+}
+
+body {
+  /* border: 1px solid red; */
+  font-family: 'Neue Montreal', sans-serif;
+}
+
+/* html,
+body {
+  height: 100%;
+  overflow: hidden;
+} */
+
+/* Navigation */
+nav {
+  align-items: center;
+  background-color: var(--black);
+  border-bottom: 1px solid var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* height: 2.975rem; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+nav button {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 1rem;
+}
+
+ul li {
+  align-items: center;
+  display: flex;
+  font-size: 0.875rem;
+  padding-left: 1.025rem;
+  position: relative;
+}
+
+ul li::before {
+  color: var(--white);
+  content: '•';
+  font-size: 3rem;
+  left: -5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav__layout--right {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  letter-spacing: -0.125rem;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: calc(100vh - 2.975rem);
+}
+
+.hero__left {
+  /* border: 1px solid orange; */
+}
+
+.hero__left img {
+  /* border: 1px solid blue; */
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* img,
+video {
+  object-fit: cover;
+} */
+
+.hero__right {
+  /* border: 1px solid lime; */
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 0.9;
+  margin-bottom: 1rem;
+}
+
+.hero__price,
+.hero__price button {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 400;
+  gap: 1rem;
+}
+
+.hero__price button {
+  all: unset;
+  background-color: var(--black);
+  border-bottom: 1px solid var(--yellow);
+  color: var(--yellow);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.hero__header--layout {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  border: 1px solid var(--white);
+  border-radius: 0.4rem;
+  font-size: 0.875rem;
+  height: fit-content;
+  padding: 0.2rem 0.4rem;
+}
+
+.video__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.video__info p,
+a {
+  font-size: 0.875rem;
+}
+
+.link__trailer {
+  color: var(--white);
+}
+
+video {
+  width: 100%;
+}

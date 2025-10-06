@@ -19,15 +19,8 @@
 }
 
 body {
-  /* border: 1px solid red; */
   font-family: 'Neue Montreal', sans-serif;
 }
-
-/* html,
-body {
-  height: 100%;
-  overflow: hidden;
-} */
 
 /* Navigation */
 nav {
@@ -36,7 +29,6 @@ nav {
   border-bottom: 1px solid var(--white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* height: 2.975rem; */
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -94,25 +86,14 @@ ul li::before {
   height: calc(100vh - 2.975rem);
 }
 
-.hero__left {
-  /* border: 1px solid orange; */
-}
-
 .hero__left img {
-  /* border: 1px solid blue; */
   display: block;
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
-/* img,
-video {
-  object-fit: cover;
-} */
-
 .hero__right {
-  /* border: 1px solid lime; */
   background-color: var(--black);
   color: var(--white);
   display: flex;
@@ -147,7 +128,6 @@ h1 {
 }
 
 .hero__header--layout {
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-between;
 }
